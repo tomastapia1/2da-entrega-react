@@ -1,0 +1,110 @@
+.main {
+    width: 100%;
+    height: auto;
+
+    &__info{
+        @include flexBox(flex,column,center,center);
+        width: 800px;
+        margin: 4rem auto;
+    }
+
+    &__title {
+        color: $c-button-orange;
+        font-size: 3rem;
+        padding: 2rem 0;
+        text-shadow: 1px 1px 1px #000000, 0px 0px 20px #00000099;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    & .listProducts {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.2rem;
+
+        & .filter {
+            width: 20rem;
+            position: absolute;
+            top: -1.5rem;
+            left: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+
+            & button {
+                font-size: 1.6rem;
+                color: $c-soft-black;
+                background-color: transparent;
+
+                &:hover {
+                    transition: color .3s ease-in-out;
+                    color: $c-button-orange;
+                }
+            }
+        }
+    }
+
+    & .card {
+        max-width: 250px;
+        height: auto;
+        background-color: $c-soft-white;
+        overflow: hidden;
+        padding: 1rem;
+        border-radius: .5rem;
+
+        &:hover {
+            transition: all .3s ease-out;
+            cursor: pointer;
+            transform: scale(1.02);
+            box-shadow: 2px 2px 1px 2px #00000089;
+        }
+        
+        &__img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+        }
+
+        &__name {
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        &__price {
+            width: 100%;
+            margin: 1.4rem 0;
+            @include flexBox (flex, row, flex-end, center);
+
+            &--span {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__btn {
+            margin-top: 10px;
+            padding: .5rem;
+            @include flexBox(flex, column, center, center);
+
+            &--btn {
+                width: 15rem;
+                padding: 1rem;
+                border-radius: .5rem;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: $c-soft-white;
+                background-color: $c-button-blue;
+                text-align: center;
+
+                &:hover {
+                    transition: background-color .3s ease-out;
+                    background-color: #0071eb;
+                }
+            }
+        }
+    }
+}

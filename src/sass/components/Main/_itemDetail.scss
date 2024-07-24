@@ -1,0 +1,68 @@
+.detailProduct {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto auto;
+    
+    &__img {
+        width: 500px;
+        overflow: hidden;
+        
+        &--img {   
+            aspect-ratio: 4 / 3;    
+        }
+    }
+
+    &__info {
+        height: auto;
+
+        & .detailProduct__title {
+            font-size: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        & .detailProduct__description {
+            font-size: 1.6rem;
+        }
+
+        & .detailProduct__stock {
+            margin: 10px 0;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        & .detailProduct__price {
+            @include flexBox(flex,row,center,center);
+            font-size: 2.5rem;
+            margin: 20px 0;
+            position: relative;
+        }
+    }
+
+
+    &__btn {
+        padding: 1rem;
+        @include flexBox(flex,row,center,center);
+        grid-column: 2;
+        grid-row: 2;
+
+        &--btn {
+            width: 20rem;
+            height: 5rem;
+            border-radius: .5rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $c-soft-white;
+            background-color: $c-button-blue;
+            text-align: center;
+
+            &:hover {
+                transition: background-color .3s ease-out;
+                background-color: #0071eb;
+            }
+        }
+    }
+}

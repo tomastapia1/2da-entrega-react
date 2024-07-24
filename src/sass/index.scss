@@ -1,0 +1,17 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+/* base */
+@import './base/reset';
+
+/* components */
+//Header
+@import './components/Header/header';
+@import './components/Header/navbar';
+//Main 
+@import './components/Main/main';
+@import './components/Main/itemDetail';
+//Nosotros
+@import './components/Nosotros/nosotros';
+//Contacto
+@import './components/Contacto/contacto';
